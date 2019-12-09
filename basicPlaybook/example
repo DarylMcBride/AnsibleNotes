@@ -1,0 +1,8 @@
+---
+- hosts: webservers
+  remote_users: root
+  tasks:
+    - name: test connection
+      ping: 
+      remote_user: name
+      become: yes
