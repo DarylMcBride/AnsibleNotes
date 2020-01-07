@@ -1,0 +1,13 @@
+---
+- hosts: all
+  name: 123
+  gather_facts: yes 
+  become: yes
+  tasks:
+    - name: 1234
+      include_tasks: /tasks/task1
+      when: ansible_facts['distributions'] == "windows"
+
+
+
+...
